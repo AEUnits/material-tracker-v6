@@ -731,6 +731,10 @@
 
         // 6. Render
         renderPaginationAndTable();
+
+        // Scroll table container to top
+        const container = document.querySelector('.table-container');
+        if (container) container.scrollTop = 0;
     }
 
     // New Render Function handling Pagination
