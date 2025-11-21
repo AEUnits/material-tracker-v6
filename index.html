@@ -1063,8 +1063,8 @@
             const typePad = typeLabel.padEnd(6, ' ');
             const srcPad = item.source.padEnd(15, ' '); // Padding for alignment
             
-            // UPDATED: Swapped item.id for item.cu to show the numeric ID in the email
-            body += `WO: ${woPad} | ${typePad} | Loc: ${srcPad} | ID: ${item.cu.padEnd(15, ' ')} | Qty: ${item.qty.toString().padEnd(5, ' ')} | Desc: ${item.desc}\n`;
+            // UPDATED: Removed Description. Added CU (using item.id for letters) and ID (using item.cu for numbers).
+            body += `WO: ${woPad} | ${typePad} | Loc: ${srcPad} | ID: ${item.cu.padEnd(15, ' ')} | CU: ${item.id.padEnd(15, ' ')} | Qty: ${item.qty}\n`;
         });
         
         body += `\n========================================================================\n`;
